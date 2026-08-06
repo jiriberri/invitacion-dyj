@@ -79,11 +79,12 @@ onUnmounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
-  margin: 2rem 0;
+  gap: 0.35rem;
+  margin: 1.5rem 0 0.5rem 0;
 
-  @media (max-width: $breakpoint-tablet) {
-    gap: 0.4rem;
+  @media (min-width: $breakpoint-tablet) {
+    gap: 0.8rem;
+    margin: 2rem 0;
   }
 }
 
@@ -93,47 +94,55 @@ onUnmounted(() => {
   align-items: center;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid $color-border;
-  border-radius: 16px;
-  padding: 1rem 1.2rem;
-  min-width: 75px;
+  border-radius: 12px;
+  padding: 0.6rem 0.4rem;
+  min-width: 58px;
   box-shadow: $shadow-card;
 
-  @media (max-width: $breakpoint-tablet) {
-    min-width: 60px;
-    padding: 0.8rem 0.6rem;
+  @media (min-width: $breakpoint-tablet) {
+    border-radius: 16px;
+    padding: 1rem 1.2rem;
+    min-width: 75px;
   }
 
   .number {
     font-family: $font-title;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: $color-primary;
     line-height: 1;
 
-    @media (max-width: $breakpoint-tablet) {
-      font-size: 1.6rem;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 2.2rem;
     }
   }
 
   .label {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: $color-text-muted;
-    margin-top: 0.4rem;
+    margin-top: 0.3rem;
 
-    @media (max-width: $breakpoint-tablet) {
-      font-size: 0.65rem;
+    @media (min-width: $breakpoint-tablet) {
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      margin-top: 0.4rem;
     }
   }
 }
 
 .separator {
   font-family: $font-title;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: $color-primary;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
 }
 </style>

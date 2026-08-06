@@ -64,7 +64,7 @@ import FooterSection from './components/FooterSection.vue';
 
 // Configuración fácil de editar para los novios
 const weddingData = ref({
-  coupleNames: 'Sofia & Mateo',
+  coupleNames: 'Dai & Juli',
   shortMessage: 'Nos encantaría compartir con vos la alegría de dar este gran paso juntos.',
   weddingDateStr: 'Sábado, 21 de Noviembre de 2026',
   weddingTime: '18:00',
@@ -82,12 +82,12 @@ const weddingData = ref({
 
   giftMessage: 'Tu presencia es nuestro mejor regalo. Si deseas realizarnos un presente para nuestra luna de miel, te compartimos nuestros datos bancarios:',
   cbu: '0000003100012345678901',
-  alias: 'SOFI.Y.MATEO.BODA',
-  bankHolder: 'Sofia & Mateo',
+  alias: 'DAI.Y.JULI.BODA',
+  bankHolder: 'Dai & Juli',
 
   transportDescription: 'Para tu comodidad, contaremos con servicio de transporte / combis hacia el salón.',
   whatsappPhone: '5491112345678',
-  whatsappMessage: '¡Hola! Quisiera consultar acerca del servicio de transporte para la boda de Sofia y Mateo.'
+  whatsappMessage: '¡Hola! Quisiera consultar acerca del servicio de transporte para la boda de Dai y Juli.'
 });
 </script>
 

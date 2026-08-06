@@ -24,8 +24,8 @@ defineProps({
 .photo-separator {
   position: relative;
   width: 100%;
-  height: 420px;
-  background-attachment: fixed;
+  height: 260px;
+  background-attachment: scroll; // En mobile scroll mejora el rendimiento
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,16 +33,16 @@ defineProps({
   align-items: center;
   justify-content: center;
 
-  @media (max-width: $breakpoint-tablet) {
-    height: 280px;
-    background-attachment: scroll; // En mobile scroll es mejor para performance
+  @media (min-width: $breakpoint-tablet) {
+    height: 400px;
+    background-attachment: fixed; // Parallax en pantallas grandes
   }
 }
 
 .separator-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .separator-content {
@@ -50,19 +50,19 @@ defineProps({
   z-index: 2;
   color: $color-white;
   text-align: center;
-  padding: 0 1.5rem;
+  padding: 0 1.2rem;
   max-width: 700px;
 }
 
 .quote-text {
   font-family: $font-title;
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   font-style: italic;
-  line-height: 1.3;
+  line-height: 1.35;
   text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 
-  @media (max-width: $breakpoint-tablet) {
-    font-size: 1.5rem;
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 2.2rem;
   }
 }
 </style>
