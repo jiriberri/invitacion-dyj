@@ -49,7 +49,7 @@ const props = defineProps({
   },
   coverImage: {
     type: String,
-    default: '/images/hero-cover.png'
+    default: '/images/hero-cover.jpg'
   },
   weddingDateStr: {
     type: String,

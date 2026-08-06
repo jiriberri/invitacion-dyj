@@ -8,6 +8,7 @@
       <h2 class="section-title">Dress Code</h2>
       <p class="dress-type">{{ dressCodeType }}</p>
       <p class="section-subtitle">{{ dressCodeDescription }}</p>
+      <p class="dress-disclaimer">{{ dressCodeDisclaimer }}</p>
     </div>
 
     <!-- Regalo / Alias CBU -->
@@ -57,11 +58,15 @@ import { Sparkles as SparklesIcon, Gift as GiftIcon, Copy as CopyIcon, Check as 
 defineProps({
   dressCodeType: {
     type: String,
-    default: 'Elegante'
+    default: 'Elegante Sport'
   },
   dressCodeDescription: {
     type: String,
-    default: 'Queremos que te sientas cómodo y te luzcas para celebrar juntos esta noche mágica.'
+    default: '¡Queremos que estés comodo!'
+  },
+  dressCodeDisclaimer: {
+    type: String,
+    default: 'No vengas con colores claros'
   },
   giftMessage: {
     type: String,

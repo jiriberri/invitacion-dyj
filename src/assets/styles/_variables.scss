@@ -1,24 +1,24 @@
 // Configuración del sistema de diseño (Design System)
 
-// Paleta de Colores
-$color-bg: #fdfbf7;
-$color-card-bg: rgba(255, 255, 255, 0.88);
-$color-primary: #b89355; // Dorado champán elegante
-$color-primary-hover: #9c7b41;
-$color-secondary: #d9be9b;
-$color-text: #2d2b2a;
-$color-text-muted: #6e6b68;
-$color-white: #ffffff;
-$color-border: #ebd9c8;
-$color-overlay: rgba(26, 23, 20, 0.45);
+// Paleta de Colores (Figma)
+$color-bg: #FEFBE3;
+$color-card-bg: rgba(255, 254, 255, 0.92);
+$color-primary: #619A89; // Verde elegante Figma
+$color-primary-hover: #4E7A6D;
+$color-secondary: #8cb8ab;
+$color-text: #2d3532;
+$color-text-muted: #626e6a;
+$color-white: #FFFEFF;
+$color-border: #d8e6e1;
+$color-overlay: rgba(26, 35, 32, 0.5);
 
 // Tipografías
 $font-title: 'Cormorant Garamond', Georgia, serif;
 $font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 
 // Sombras & Efectos
-$shadow-card: 0 12px 35px rgba(184, 147, 85, 0.08), 0 4px 15px rgba(0, 0, 0, 0.03);
-$shadow-hover: 0 16px 40px rgba(184, 147, 85, 0.18);
+$shadow-card: 0 10px 30px rgba(97, 154, 137, 0.1), 0 2px 10px rgba(0, 0, 0, 0.02);
+$shadow-hover: 0 15px 38px rgba(97, 154, 137, 0.22);
 $glass-backdrop: blur(14px);
 
 // Transiciones

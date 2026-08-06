@@ -18,7 +18,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, .font-serif {
+h1,
+h2,
+h3,
+h4,
+.font-serif {
   font-family: $font-title;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -166,5 +170,24 @@ button {
   @media (min-width: $breakpoint-tablet) {
     font-size: 1.05rem;
     margin-bottom: 2.5rem;
+  }
+}
+
+.dress-disclaimer {
+  display: inline-block;
+  font-style: italic;
+  text-align: center;
+  color: $color-primary-hover;
+  background: rgba(97, 154, 137, 0.08);
+  border: 1px dashed rgba(97, 154, 137, 0.35);
+  border-radius: 30px;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.85rem;
+  margin: 0.5rem auto 0 auto;
+  line-height: 1.4;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 0.95rem;
+    padding: 0.55rem 1.5rem;
   }
 }

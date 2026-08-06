@@ -5,14 +5,14 @@
       <div class="icon-circle">
         <MapPinIcon class="icon" />
       </div>
-      <h2 class="section-title">Fiesta & Celebración</h2>
+      <h2 class="section-title">Fiesta</h2>
       <p class="venue-name">{{ venueName }}</p>
       <p class="venue-address">{{ venueAddress }}</p>
       <p class="venue-time">Horario: {{ partyTime }} hs</p>
       
       <div class="btn-wrapper">
         <a :href="googleMapsUrl" target="_blank" rel="noopener" class="btn-primary">
-          <NavigationIcon /> ¿Cómo llegar? (Google Maps)
+          <NavigationIcon /> ¿Cómo llegar?
         </a>
       </div>
     </div>
@@ -22,9 +22,9 @@
       <div class="icon-circle">
         <MusicIcon class="icon" />
       </div>
-      <h2 class="section-title">¿Qué tema no puede faltar?</h2>
+      <h2 class="section-title">¡Que no pare la música!</h2>
       <p class="section-subtitle">
-        ¡Queremos que bailes toda la noche! Ayudanos a armar la playlist perfecta sugiriendo tu canción favorita.
+        Queremos que la pista de baile sea inolvidable. Ayudanos a armar la playlist perfecta.
       </p>
 
       <div class="btn-wrapper">

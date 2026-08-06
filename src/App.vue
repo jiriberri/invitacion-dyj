@@ -4,6 +4,7 @@
     <HeroSection 
       :coupleNames="weddingData.coupleNames"
       :shortMessage="weddingData.shortMessage"
+      :coverImage="weddingData.coverImage"
       :weddingDateStr="weddingData.weddingDateStr"
       :weddingTime="weddingData.weddingTime"
       :weddingIsoDate="weddingData.weddingIsoDate"
@@ -29,6 +30,7 @@
     <DressCodeGiftSection 
       :dressCodeType="weddingData.dressCodeType"
       :dressCodeDescription="weddingData.dressCodeDescription"
+      :dressCodeDisclaimer="weddingData.dressCodeDisclaimer"
       :giftMessage="weddingData.giftMessage"
       :cbu="weddingData.cbu"
       :alias="weddingData.alias"
@@ -66,6 +68,7 @@ import FooterSection from './components/FooterSection.vue';
 const weddingData = ref({
   coupleNames: 'Dai & Juli',
   shortMessage: 'Nos encantaría compartir con vos la alegría de dar este gran paso juntos.',
+  coverImage: '/images/hero-cover.jpg',
   weddingDateStr: 'Sábado, 21 de Noviembre de 2026',
   weddingTime: '18:00',
   weddingIsoDate: '2026-11-21T18:00:00',
@@ -77,8 +80,9 @@ const weddingData = ref({
 
   musicFormUrl: 'https://forms.google.com', // Link de Google Forms para sugerir música
 
-  dressCodeType: 'Elegante',
-  dressCodeDescription: 'Queremos que te sientas cómodo y te luzcas para celebrar juntos esta noche inolvidable.',
+  dressCodeType: 'Elegante Sport',
+  dressCodeDescription: '¡Queremos que estés cómodo!',
+  dressCodeDisclaimer: 'No vengas con colores claros',
 
   giftMessage: 'Tu presencia es nuestro mejor regalo. Si deseas realizarnos un presente para nuestra luna de miel, te compartimos nuestros datos bancarios:',
   cbu: '0000003100012345678901',
