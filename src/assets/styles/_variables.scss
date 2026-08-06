@@ -1,0 +1,30 @@
+// Configuración del sistema de diseño (Design System)
+
+// Paleta de Colores
+$color-bg: #fdfbf7;
+$color-card-bg: rgba(255, 255, 255, 0.88);
+$color-primary: #b89355; // Dorado champán elegante
+$color-primary-hover: #9c7b41;
+$color-secondary: #d9be9b;
+$color-text: #2d2b2a;
+$color-text-muted: #6e6b68;
+$color-white: #ffffff;
+$color-border: #ebd9c8;
+$color-overlay: rgba(26, 23, 20, 0.45);
+
+// Tipografías
+$font-title: 'Cormorant Garamond', Georgia, serif;
+$font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+
+// Sombras & Efectos
+$shadow-card: 0 12px 35px rgba(184, 147, 85, 0.08), 0 4px 15px rgba(0, 0, 0, 0.03);
+$shadow-hover: 0 16px 40px rgba(184, 147, 85, 0.18);
+$glass-backdrop: blur(14px);
+
+// Transiciones
+$transition-smooth: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+// Breakpoints Responsivos
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
