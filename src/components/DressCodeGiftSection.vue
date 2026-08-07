@@ -41,6 +41,7 @@
         <div class="detail-row" v-if="bankHolder">
           <span class="detail-label">Titular:</span>
           <span class="detail-value">{{ bankHolder }}</span>
+          <span class="copy-btn-placeholder"></span>
         </div>
       </div>
 
@@ -143,20 +144,22 @@ const copyToClipboard = (text, fieldName) => {
 }
 
 .detail-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 65px 1fr 34px;
   align-items: center;
-  justify-content: space-between;
   gap: 0.5rem;
   font-size: 0.95rem;
 
   .detail-label {
     font-weight: 600;
     color: $color-text-muted;
+    text-align: left;
   }
 
   .detail-value {
     font-weight: 600;
     color: $color-text;
+    text-align: center;
     word-break: break-all;
 
     &.highlight {
@@ -165,6 +168,12 @@ const copyToClipboard = (text, fieldName) => {
       letter-spacing: 0.5px;
     }
   }
+}
+
+.copy-btn-placeholder {
+  width: 34px;
+  height: 34px;
+  display: inline-block;
 }
 
 .copy-btn {

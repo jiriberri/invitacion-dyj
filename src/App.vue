@@ -85,9 +85,9 @@ const weddingData = ref({
   dressCodeDisclaimer: 'No vengas con colores claros',
 
   giftMessage: 'Tu presencia es nuestro mejor regalo. Si deseas realizarnos un presente para nuestra luna de miel, te compartimos nuestros datos bancarios:',
-  cbu: '0000003100012345678901',
-  alias: 'DAI.Y.JULI.BODA',
-  bankHolder: 'Dai & Juli',
+  cbu: '0720079388000002409786',
+  alias: 'PAPEL.GRADO.MONTE',
+  bankHolder: 'Julián Iriberri',
 
   transportDescription: 'Para tu comodidad, contaremos con servicio de transporte / combis hacia el salón.',
   whatsappPhone: '5491112345678',
