@@ -28,7 +28,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 const props = defineProps({
   targetDate: {
     type: String,
-    required: true // Formato ISO, ej: "2026-11-20T18:00:00"
+    required: true
   }
 });
 

@@ -53,19 +53,19 @@ const props = defineProps({
   },
   weddingDateStr: {
     type: String,
-    default: 'Sábado, 21 de Noviembre de 2026'
+    default: 'Sábado, 31 de Octubre de 2026'
   },
   weddingTime: {
     type: String,
-    default: '18:00'
+    default: '21:00'
   },
   weddingIsoDate: {
     type: String,
-    default: '2026-11-21T18:00:00'
+    default: '2026-10-31T21:00:00'
   },
   rsvpFormUrl: {
     type: String,
-    default: 'https://forms.google.com'
+    default: 'https://forms.gle/eQd9J279cE1W84sH9'
   }
 });
 

@@ -69,14 +69,14 @@ const weddingData = ref({
   coupleNames: 'Dai & Juli',
   shortMessage: 'Nos encantaría compartir con vos la alegría de dar este gran paso juntos.',
   coverImage: '/images/hero-cover.jpg',
-  weddingDateStr: 'Sábado, 21 de Noviembre de 2026',
-  weddingTime: '18:00',
-  weddingIsoDate: '2026-11-21T18:00:00',
+  weddingDateStr: 'Sábado, 31 de Octubre de 2026',
+  weddingTime: '21:00',
+  weddingIsoDate: '2026-10-31T21:00:00',
   rsvpFormUrl: 'https://forms.google.com', // Reemplazar con el link real de Google Forms
   
-  venueName: 'Salón Quinta de las Rosas',
-  venueAddress: 'Av. Las Palmas 1234, Buenos Aires',
-  googleMapsUrl: 'https://maps.google.com', // Link de Google Maps
+  venueName: 'Salón Ohana',
+  venueAddress: 'Pozo de Vargas 2257, Pablo Nogués',
+  googleMapsUrl: 'https://maps.app.goo.gl/pwLpSPKkooLREtjAA',
 
   musicFormUrl: 'https://forms.google.com', // Link de Google Forms para sugerir música
 
