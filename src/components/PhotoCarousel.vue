@@ -15,14 +15,19 @@
           :key="index" 
           class="carousel-slide"
         >
-          <img :src="img" :alt="`Foto ${index + 1}`" class="carousel-image" />
+          <img 
+            :src="typeof img === 'string' ? img : img.src" 
+            :alt="`Foto ${index + 1}`" 
+            class="carousel-image" 
+            :style="{ objectPosition: typeof img === 'object' && img.position ? img.position : 'center' }"
+          />
         </div>
       </div>
 
-      <button @click="prevSlide" class="nav-btn prev-btn" aria-label="Anterior">
+      <button @click="handlePrev" class="nav-btn prev-btn" aria-label="Anterior">
         <ChevronLeftIcon />
       </button>
-      <button @click="nextSlide" class="nav-btn next-btn" aria-label="Siguiente">
+      <button @click="handleNext" class="nav-btn next-btn" aria-label="Siguiente">
         <ChevronRightIcon />
       </button>
     </div>
@@ -33,7 +38,7 @@
         v-for="(img, index) in images" 
         :key="index"
         :class="['dot', { active: currentIndex === index }]"
-        @click="currentIndex = index"
+        @click="goToSlide(index)"
       ></span>
     </div>
   </div>
@@ -47,9 +52,9 @@ const props = defineProps({
   images: {
     type: Array,
     default: () => [
-      '/images/carousel-1.png',
-      '/images/carousel-2.png',
-      '/images/hero-cover.png'
+      '/images/carousel-1.jpg',
+      '/images/carousel-2.jpeg',
+      { src: '/images/carousel-3.jpg', position: 'top' } // REVISAR DESPUES SI ES MEJOR CORTAR LA FOTO
     ]
   }
 });
@@ -57,39 +62,65 @@ const props = defineProps({
 const currentIndex = ref(0);
 let autoPlayInterval = null;
 
+// VER SI DESPUES CONVIENE SACAR EL AUTOPLAY
+const startAutoPlay = () => {
+  stopAutoPlay();
+  autoPlayInterval = setInterval(nextSlide, 6000);
+};
+const stopAutoPlay = () => {
+  if (autoPlayInterval) {
+    clearInterval(autoPlayInterval);
+    autoPlayInterval = null;
+  }
+};
+const resetAutoPlay = () => {
+  startAutoPlay();
+};
+
+const nextSlide = () => {
+  currentIndex.value = (currentIndex.value + 1) % props.images.length;
+};
+const prevSlide = () => {
+  currentIndex.value = (currentIndex.value - 1 + props.images.length) % props.images.length;
+};
+const handleNext = () => {
+  nextSlide();
+  resetAutoPlay();
+};
+const handlePrev = () => {
+  prevSlide();
+  resetAutoPlay();
+};
+
+const goToSlide = (index) => {
+  currentIndex.value = index;
+  resetAutoPlay();
+};
+
 // Gestos táctiles para dispositivos móviles
 let touchStartX = 0;
 
 const onTouchStart = (e) => {
   touchStartX = e.touches[0].clientX;
 };
-
 const onTouchEnd = (e) => {
   const touchEndX = e.changedTouches[0].clientX;
   const diff = touchStartX - touchEndX;
   if (Math.abs(diff) > 40) {
     if (diff > 0) {
-      nextSlide();
+      handleNext();
     } else {
-      prevSlide();
+      handlePrev();
     }
   }
 };
 
-const nextSlide = () => {
-  currentIndex.value = (currentIndex.value + 1) % props.images.length;
-};
-
-const prevSlide = () => {
-  currentIndex.value = (currentIndex.value - 1 + props.images.length) % props.images.length;
-};
-
 onMounted(() => {
-  autoPlayInterval = setInterval(nextSlide, 4500);
+  startAutoPlay();
 });
 
 onUnmounted(() => {
-  if (autoPlayInterval) clearInterval(autoPlayInterval);
+  stopAutoPlay();
 });
 </script>
 

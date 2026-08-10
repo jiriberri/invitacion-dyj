@@ -1,7 +1,12 @@
 <template>
   <footer class="footer-section">
     <div class="closing-image-wrapper">
-      <img :src="closingImage" alt="Gracias por acompañarnos" class="closing-image" />
+      <img 
+            :src="typeof closingImage === 'string' ? closingImage : closingImage.src" 
+            alt="Gracias por acompañarnos" 
+            class="closing-image" 
+            :style="{ objectPosition: typeof closingImage === 'object' && closingImage.position ? closingImage.position : 'center' }"
+          />
       <div class="closing-overlay"></div>
       <div class="closing-content">
         <h2 class="thank-you-title">¡Te Esperamos!</h2>
@@ -16,7 +21,7 @@
 defineProps({
   closingImage: {
     type: String,
-    default: '/images/closing.png'
+    default: {src: '/images/closing.jpg', position: 'top'}
   },
   coupleNames: {
     type: String,

@@ -22,8 +22,7 @@
 
     <!-- Foto Separadora 1 -->
     <PhotoSeparator 
-      imageUrl="/images/separator-1.png"
-      quote="Lo mejor de la vida es encontrar a alguien con quien compartirla"
+      imageUrl="/images/separator-1.jpg"
     />
 
     <!-- Parte 3: Dress Code & Regalos (Alias / CBU) -->
