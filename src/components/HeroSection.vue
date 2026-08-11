@@ -4,8 +4,8 @@
       <img :src="coverImage" alt="Nuestra Boda" class="hero-image" />
       <div class="hero-overlay"></div>
       <div class="hero-header-content">
-        <p class="pre-title">¡Nos Casamos!</p>
         <h1 class="couple-names">{{ coupleNames }}</h1>
+        <p class="pre-title">¡Nos Casamos!</p>
         <p class="hero-message">{{ shortMessage }}</p>
       </div>
     </div>

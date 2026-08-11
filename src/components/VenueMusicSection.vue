@@ -2,9 +2,7 @@
   <section class="venue-music-section section-container">
     <!-- Ubicación del Salón -->
     <div class="glass-card venue-card">
-      <div class="icon-circle">
-        <MapPinIcon class="icon" />
-      </div>
+      <img src="/images/party-logo.gif" alt="Party" class="icon">
       <h2 class="section-title">Fiesta</h2>
       <p class="venue-name">{{ venueName }}</p>
       <p class="venue-address">{{ venueAddress }}</p>
@@ -37,7 +35,7 @@
 </template>
 
 <script setup>
-import { MapPin as MapPinIcon, Navigation as NavigationIcon, Music as MusicIcon, Disc as DiscIcon } from '@lucide/vue';
+import { Navigation as NavigationIcon, Music as MusicIcon, Disc as DiscIcon } from '@lucide/vue';
 
 defineProps({
   venueName: {
@@ -70,21 +68,9 @@ defineProps({
   gap: 2.5rem;
 }
 
-.icon-circle {
-  width: 55px;
-  height: 55px;
-  background: rgba(184, 147, 85, 0.12);
-  color: $color-primary;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem auto;
-
-  .icon {
-    width: 26px;
-    height: 26px;
-  }
+.icon, img {
+  width: 110px;
+  object-fit: contain;
 }
 
 .venue-name {
