@@ -92,15 +92,10 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid $color-border;
-  border-radius: 12px;
   padding: 0.6rem 0.4rem;
   min-width: 58px;
-  box-shadow: $shadow-card;
 
   @media (min-width: $breakpoint-tablet) {
-    border-radius: 16px;
     padding: 1rem 1.2rem;
     min-width: 75px;
   }

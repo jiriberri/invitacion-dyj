@@ -117,9 +117,9 @@ button {
   border: 1px solid $color-primary;
   padding: 0.75rem 1.6rem;
   border-radius: 40px;
-  font-family: $font-title;
+  font-family: $font-tangier;
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
   box-shadow: 0 4px 18px rgba(97, 154, 137, 0.25);
@@ -151,7 +151,6 @@ button {
   background: $color-card-bg;
   backdrop-filter: $glass-backdrop;
   border: 1px solid $color-border;
-  border-radius: 20px;
   padding: 1.8rem 1.2rem;
   box-shadow: $shadow-card;
   text-align: center;
@@ -166,7 +165,7 @@ button {
 .section-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 3rem 1rem;
+  padding: 2rem 0;
 
   @media (min-width: $breakpoint-tablet) {
     padding: 4.5rem 1.5rem;
