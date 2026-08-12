@@ -118,26 +118,25 @@ const googleCalendarUrl = computed(() => {
 
 .couple-names {
   font-family: $font-against;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 6rem;
   color: $color-white;
-  margin-bottom: 0.2rem;
   text-shadow: 0 4px 15px rgba(0,0,0,0.4);
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 4rem;
-    margin-bottom: 0.5rem;
   }
 }
 
 .pre-title {
   font-family: $font-title;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: $color-white;
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
+  line-height: 3rem;
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 1.6rem;
@@ -148,6 +147,7 @@ const googleCalendarUrl = computed(() => {
   margin-top: -2.8rem;
   position: relative;
   z-index: 3;
+  background-color: $color-card-bg;
 
   @media (min-width: $breakpoint-tablet) {
     margin-top: -4rem;
@@ -161,6 +161,7 @@ const googleCalendarUrl = computed(() => {
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 1.2rem;
+  line-height: 3rem;
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 1.6rem;
@@ -170,14 +171,13 @@ const googleCalendarUrl = computed(() => {
 
 .until-wedding {
   font-family: $font-tangier;
-  font-size: 1.8rem;
+  font-size: 1rem;
   color: $color-primary;
   font-weight: 400;
-  margin: 1.5rem 0 0.2rem 0;
+  letter-spacing: 1px;
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 2.2rem;
-    margin: 2rem 0 0.5rem 0;
   }
 }
 

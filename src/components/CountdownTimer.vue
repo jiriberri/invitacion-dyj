@@ -80,7 +80,7 @@ onUnmounted(() => {
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
-  margin: 1.5rem 0 0.5rem 0;
+  margin: 0 0 0.5rem 0;
 
   @media (min-width: $breakpoint-tablet) {
     gap: 0.8rem;
@@ -102,14 +102,10 @@ onUnmounted(() => {
 
   .number {
     font-family: $font-title;
-    font-size: 1.8rem;
+    font-size: 3rem;
     font-weight: 700;
     color: $color-primary;
-    line-height: 1;
-
-    @media (min-width: $breakpoint-tablet) {
-      font-size: 2.6rem;
-    }
+    line-height: 3rem;
   }
 
   .label {
