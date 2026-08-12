@@ -1,3 +1,24 @@
+// Fuentes Personalizadas de Figma (Carga de archivos locales)
+@font-face {
+  font-family: 'Against';
+  src: url('/fonts/against.ttf') format('truetype'),
+    url('/fonts/against.otf') format('opentype'),
+    url('/fonts/against.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tangier';
+  src: url('/fonts/tangier.ttf') format('truetype'),
+    url('/fonts/tangier.otf') format('opentype'),
+    url('/fonts/tangier.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -47,29 +68,30 @@ button {
   justify-content: center;
   gap: 0.6rem;
   width: 100%;
-  min-height: 50px; // Área táctil recomendada para móviles
-  background: linear-gradient(135deg, $color-primary 0%, #c4a163 100%);
+  min-height: 44px;
+  background: $color-primary;
   color: $color-white;
-  padding: 0.85rem 1.5rem;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.8px;
+  padding: 0.75rem 1.6rem;
+  border-radius: 40px;
+  font-family: $font-title;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  box-shadow: 0 4px 18px rgba(184, 147, 85, 0.3);
+  box-shadow: 0 4px 18px rgba(97, 154, 137, 0.25);
   transition: $transition-smooth;
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
     width: auto;
-    font-size: 0.95rem;
-    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    padding: 0.85rem 2.2rem;
   }
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(184, 147, 85, 0.45);
-    background: linear-gradient(135deg, $color-primary-hover 0%, $color-primary 100%);
+    box-shadow: 0 8px 25px rgba(97, 154, 137, 0.4);
+    background: $color-primary-hover;
   }
 
   &:active {
@@ -77,8 +99,8 @@ button {
   }
 
   svg {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.15rem;
+    height: 1.15rem;
     flex-shrink: 0;
   }
 }
@@ -89,27 +111,30 @@ button {
   justify-content: center;
   gap: 0.6rem;
   width: 100%;
-  min-height: 50px;
-  background: rgba(255, 255, 255, 0.95);
-  color: $color-primary;
-  border: 1px solid $color-border;
-  padding: 0.85rem 1.5rem;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  box-shadow: $shadow-card;
+  min-height: 44px;
+  background: $color-primary;
+  color: $color-white;
+  border: 1px solid $color-primary;
+  padding: 0.75rem 1.6rem;
+  border-radius: 40px;
+  font-family: $font-title;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 18px rgba(97, 154, 137, 0.25);
   transition: $transition-smooth;
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
     width: auto;
-    padding: 0.85rem 1.8rem;
+    font-size: 1rem;
+    padding: 0.85rem 2.2rem;
   }
 
   &:hover {
-    background: $color-white;
-    border-color: $color-primary;
+    background: $color-primary-hover;
+    border-color: $color-primary-hover;
     transform: translateY(-2px);
     box-shadow: $shadow-hover;
   }

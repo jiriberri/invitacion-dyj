@@ -3,7 +3,6 @@
     <!-- Parte 1: Portada, Nombres, Mensaje, Calendario & Cuenta Regresiva -->
     <HeroSection 
       :coupleNames="weddingData.coupleNames"
-      :shortMessage="weddingData.shortMessage"
       :coverImage="weddingData.coverImage"
       :weddingDateStr="weddingData.weddingDateStr"
       :weddingTime="weddingData.weddingTime"
@@ -66,9 +65,8 @@ import FooterSection from './components/FooterSection.vue';
 // Configuración fácil de editar para los novios
 const weddingData = ref({
   coupleNames: 'Dai & Juli',
-  shortMessage: 'Nos encantaría compartir con vos la alegría de dar este gran paso juntos.',
   coverImage: '/images/hero-cover.jpg',
-  weddingDateStr: 'Sábado, 31 de Octubre de 2026',
+  weddingDateStr: '31 de Octubre de 2026',
   weddingTime: '21:00',
   weddingIsoDate: '2026-10-31T21:00:00',
   rsvpFormUrl: 'https://forms.google.com', // Reemplazar con el link real de Google Forms

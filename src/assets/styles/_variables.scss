@@ -1,8 +1,8 @@
 // Configuración del sistema de diseño (Design System)
 
 // Paleta de Colores (Figma)
-$color-bg: #FEFBE3;
-$color-card-bg: rgba(255, 254, 255, 0.92);
+$color-bg: rgba(255, 254, 255, 0.92);
+$color-card-bg: #FEFBE3;
 $color-primary: #619A89; // Verde elegante Figma
 $color-primary-hover: #4E7A6D;
 $color-secondary: #8cb8ab;
@@ -14,6 +14,8 @@ $color-overlay: rgba(26, 35, 32, 0.5);
 
 // Tipografías
 $font-title: 'Kaisei Decol', serif;
+$font-against: 'Against', 'Kaisei Decol', serif;
+$font-tangier: 'Tangier', 'Great Vibes', cursive;
 $font-body: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
 
 // Sombras & Efectos

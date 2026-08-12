@@ -107,28 +107,29 @@ onUnmounted(() => {
 
   .number {
     font-family: $font-title;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: $color-primary;
     line-height: 1;
 
     @media (min-width: $breakpoint-tablet) {
-      font-size: 2.2rem;
+      font-size: 2.6rem;
     }
   }
 
   .label {
-    font-size: 0.6rem;
-    font-weight: 600;
+    font-family: $font-title;
+    font-size: 0.65rem;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: $color-text-muted;
-    margin-top: 0.3rem;
+    letter-spacing: 0.8px;
+    color: $color-primary;
+    margin-top: 0.35rem;
 
     @media (min-width: $breakpoint-tablet) {
       font-size: 0.75rem;
       letter-spacing: 1px;
-      margin-top: 0.4rem;
+      margin-top: 0.45rem;
     }
   }
 }

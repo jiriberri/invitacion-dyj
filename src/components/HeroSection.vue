@@ -5,29 +5,22 @@
       <div class="hero-overlay"></div>
       <div class="hero-header-content">
         <h1 class="couple-names">{{ coupleNames }}</h1>
-        <p class="pre-title">¡Nos Casamos!</p>
-        <p class="hero-message">{{ shortMessage }}</p>
+        <p class="pre-title">¡Nos casamos!</p>
       </div>
     </div>
 
     <div class="section-container">
       <div class="glass-card date-card">
-        <div class="calendar-icon-wrapper">
-          <CalendarIcon class="calendar-icon" />
-        </div>
         <p class="wedding-date-text">{{ formattedDate }}</p>
-        <p class="wedding-time-text">{{ weddingTime }} hs</p>
+        
+        <p class="until-wedding">FALTAN...</p>
+        <CountdownTimer :targetDate="weddingIsoDate" />
         
         <div class="action-buttons">
           <a :href="googleCalendarUrl" target="_blank" rel="noopener" class="btn-secondary">
-            <CalendarPlusIcon /> Agendar Fecha
-          </a>
-          <a :href="rsvpFormUrl" target="_blank" rel="noopener" class="btn-primary">
-            <CheckCircleIcon /> Confirmar Asistencia
+            <CalendarPlusIcon /> AGENDAR FECHA
           </a>
         </div>
-
-        <CountdownTimer :targetDate="weddingIsoDate" />
       </div>
     </div>
   </header>
@@ -35,17 +28,13 @@
 
 <script setup>
 import { computed } from 'vue';
-import { Calendar as CalendarIcon, CalendarPlus as CalendarPlusIcon, CheckCircle as CheckCircleIcon } from '@lucide/vue';
+import { CalendarPlus as CalendarPlusIcon } from '@lucide/vue';
 import CountdownTimer from './CountdownTimer.vue';
 
 const props = defineProps({
   coupleNames: {
     type: String,
-    default: 'Nombre 1 & Nombre 2'
-  },
-  shortMessage: {
-    type: String,
-    default: 'Queremos compartir con vos este momento tan especial en nuestras vidas.'
+    default: 'Dai & Juli'
   },
   coverImage: {
     type: String,
@@ -53,7 +42,7 @@ const props = defineProps({
   },
   weddingDateStr: {
     type: String,
-    default: 'Sábado, 31 de Octubre de 2026'
+    default: '31 DE OCTUBRE DE 2026'
   },
   weddingTime: {
     type: String,
@@ -62,19 +51,15 @@ const props = defineProps({
   weddingIsoDate: {
     type: String,
     default: '2026-10-31T21:00:00'
-  },
-  rsvpFormUrl: {
-    type: String,
-    default: 'https://forms.gle/eQd9J279cE1W84sH9'
   }
 });
 
-const formattedDate = computed(() => props.weddingDateStr);
+const formattedDate = computed(() => props.weddingDateStr.toUpperCase());
 
 const googleCalendarUrl = computed(() => {
   const title = encodeURIComponent(`Boda ${props.coupleNames}`);
   const details = encodeURIComponent('¡Te esperamos para celebrar nuestra boda!');
-  const location = encodeURIComponent('Salón de Fiestas');
+  const location = encodeURIComponent('Salón Ohana Eventos');
   const isoStart = props.weddingIsoDate.replace(/[-:]/g, '');
   return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=${isoStart}/${isoStart}`;
 });
@@ -116,7 +101,7 @@ const googleCalendarUrl = computed(() => {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.7) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%);
 }
 
 .hero-header-content {
@@ -131,41 +116,31 @@ const googleCalendarUrl = computed(() => {
   }
 }
 
-.pre-title {
-  font-family: $font-title;
-  font-size: 1.3rem;
-  font-style: italic;
-  letter-spacing: 2px;
-  margin-bottom: 0.3rem;
+.couple-names {
+  font-family: $font-against;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: $color-white;
+  margin-bottom: 0.2rem;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.4);
 
   @media (min-width: $breakpoint-tablet) {
-    font-size: 1.6rem;
+    font-size: 4rem;
     margin-bottom: 0.5rem;
   }
 }
 
-.couple-names {
-  font-size: 2.6rem;
-  line-height: 1.15;
-  margin-bottom: 0.8rem;
-  text-shadow: 0 4px 15px rgba(0,0,0,0.35);
+.pre-title {
+  font-family: $font-title;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: $color-white;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
 
   @media (min-width: $breakpoint-tablet) {
-    font-size: 3.8rem;
-    margin-bottom: 1rem;
-  }
-}
-
-.hero-message {
-  font-size: 0.95rem;
-  font-weight: 300;
-  opacity: 0.95;
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.5;
-
-  @media (min-width: $breakpoint-tablet) {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -179,54 +154,30 @@ const googleCalendarUrl = computed(() => {
   }
 }
 
-.calendar-icon-wrapper {
-  width: 52px;
-  height: 52px;
-  background: rgba(184, 147, 85, 0.1);
-  color: $color-primary;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 0.8rem auto;
-
-  @media (min-width: $breakpoint-tablet) {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
-  }
-
-  .calendar-icon {
-    width: 24px;
-    height: 24px;
-
-    @media (min-width: $breakpoint-tablet) {
-      width: 28px;
-      height: 28px;
-    }
-  }
-}
-
 .wedding-date-text {
   font-family: $font-title;
-  font-size: 1.5rem;
-  color: $color-text;
-  font-weight: 700;
-
-  @media (min-width: $breakpoint-tablet) {
-    font-size: 2rem;
-  }
-}
-
-.wedding-time-text {
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: $color-primary;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 1px;
   margin-bottom: 1.2rem;
 
   @media (min-width: $breakpoint-tablet) {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
+  }
+}
+
+.until-wedding {
+  font-family: $font-tangier;
+  font-size: 1.8rem;
+  color: $color-primary;
+  font-weight: 400;
+  margin: 1.5rem 0 0.2rem 0;
+
+  @media (min-width: $breakpoint-tablet) {
+    font-size: 2.2rem;
+    margin: 2rem 0 0.5rem 0;
   }
 }
 
@@ -236,7 +187,7 @@ const googleCalendarUrl = computed(() => {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 
   @media (min-width: $breakpoint-tablet) {
     flex-direction: row;
