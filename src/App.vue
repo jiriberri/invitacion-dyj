@@ -67,12 +67,12 @@ const weddingData = ref({
   coupleNames: 'Dai & Juli',
   coverImage: '/images/hero-cover.jpg',
   weddingDateStr: '31 de Octubre de 2026',
-  weddingTime: '21:00',
+  weddingTime: '21:30',
   weddingIsoDate: '2026-10-31T21:00:00',
   rsvpFormUrl: 'https://forms.google.com', // Reemplazar con el link real de Google Forms
   
-  venueName: 'Salón Ohana',
-  venueAddress: 'Pozo de Vargas 2257, Pablo Nogués',
+  venueName: 'Salón Ohana Eventos',
+  venueAddress: 'Pozo de Vargas 2257 Ingeniero Pablo Nogués',
   googleMapsUrl: 'https://maps.app.goo.gl/pwLpSPKkooLREtjAA',
 
   musicFormUrl: 'https://forms.google.com', // Link de Google Forms para sugerir música

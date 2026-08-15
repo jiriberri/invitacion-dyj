@@ -3,10 +3,10 @@
     <!-- Ubicación del Salón -->
     <div class="glass-card venue-card">
       <img src="/images/party-logo.gif" alt="Party" class="icon">
-      <h2 class="section-title">Fiesta</h2>
+      <h2 class="section-title">FIESTA</h2>
       <p class="venue-name">{{ venueName }}</p>
       <p class="venue-address">{{ venueAddress }}</p>
-      <p class="venue-time">Horario: {{ partyTime }} hs</p>
+      <p class="venue-time">Ceremonia comienza {{ partyTime }}hs, ser puntuales</p>
       
       <div class="action-buttons">
           <a :href="googleMapsUrl" target="_blank" rel="noopener" class="btn-primary">CÓMO LLEGAR</a>
@@ -36,11 +36,11 @@ import { Music as MusicIcon } from '@lucide/vue';
 defineProps({
   venueName: {
     type: String,
-    default: 'Salón Quinta de las Rosas'
+    default: 'Salón Ohana Eventos'
   },
   venueAddress: {
     type: String,
-    default: 'Av. Las Palmas 1234, Buenos Aires, Argentina'
+    default: 'Pozo de Vargas 2257 Ingeniero Pablo Nogués'
   },
   partyTime: {
     type: String,
@@ -65,7 +65,7 @@ defineProps({
 }
 
 .icon, img {
-  width: 110px;
+  width: 150px;
   object-fit: contain;
 }
 
@@ -73,21 +73,26 @@ defineProps({
   font-family: $font-title;
   font-size: 1.8rem;
   font-weight: 700;
-  color: $color-text;
-  margin-top: 0.5rem;
+  color: $color-primary;
+  margin: 0.5rem 0;
 }
 
 .venue-address {
-  font-size: 1rem;
-  color: $color-text-muted;
+  font-family: $font-subtitle;
+  color: $color-primary;
+  font-size: 1.2rem;
   margin-bottom: 0.3rem;
+  padding: 0 4rem;
+  line-height: 1.5rem;
 }
 
 .venue-time {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-family: $font-subtitle;
   color: $color-primary;
-  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 1.5rem 0 0;
+  line-height: 1.7rem;
 }
 
 .btn-wrapper {

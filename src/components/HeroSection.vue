@@ -26,7 +26,6 @@
 
 <script setup>
 import { computed } from 'vue';
-import { CalendarPlus as CalendarPlusIcon } from '@lucide/vue';
 import CountdownTimer from './CountdownTimer.vue';
 
 const props = defineProps({
