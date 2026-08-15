@@ -1,6 +1,7 @@
 <template>
   <section class="transport-section section-container">
     <div class="glass-card transport-card">
+      <img src="/images/transport-logo.gif" alt="Transport" class="icon-transport">
       <h2 class="section-title">TRANSPORTE</h2>
       <p class="section-subtitle">¿Necesitas transporte?</p>
       <p class="section-description transport-description">{{ transportDescription }}</p>
@@ -40,6 +41,11 @@ const whatsappUrl = computed(() => {
 .transport-section .transport-card .section-title {
   line-height: 3rem;
   font-size: 1.6rem;
+}
+
+.icon-transport {
+  width: 130px;
+  object-fit: contain;
 }
 
 .transport-description {

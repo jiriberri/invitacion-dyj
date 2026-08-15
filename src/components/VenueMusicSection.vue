@@ -2,7 +2,7 @@
   <section class="venue-music-section section-container">
     <!-- Ubicación del Salón -->
     <div class="glass-card venue-card">
-      <img src="/images/party-logo.gif" alt="Party" class="icon">
+      <img src="/images/party-logo.gif" alt="Party" class="icon-party">
       <h2 class="section-title">FIESTA</h2>
       <p class="venue-name">{{ venueName }}</p>
       <p class="venue-address">{{ venueAddress }}</p>
@@ -15,9 +15,7 @@
 
     <!-- Sugerencia de Música -->
     <div class="glass-card music-card">
-      <div class="icon-circle">
-        <MusicIcon class="icon" />
-      </div>
+      <img src="/images/music-logo.gif" alt="Music" class="icon-music">
       <h2 class="section-title"> MÚSICA </h2>
       <p class="section-subtitle">¡Que no pare la fiesta!</p>
       <p class="section-description">
@@ -65,8 +63,13 @@ defineProps({
   gap: 2.5rem;
 }
 
-.icon, img {
-  width: 150px;
+.icon-party {
+  width: 130px;
+  object-fit: contain;
+}
+
+.icon-music {
+  width: 90px;
   object-fit: contain;
 }
 

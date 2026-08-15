@@ -2,7 +2,6 @@
   <header class="hero-section">
     <div class="hero-image-wrapper">
       <img :src="coverImage" alt="Nuestra Boda" class="hero-image" />
-      <div class="hero-overlay"></div>
       <div class="hero-header-content">
         <h1 class="couple-names">{{ coupleNames }}</h1>
         <p class="pre-title">¡Nos casamos!</p>
@@ -11,7 +10,10 @@
 
     <div class="section-container">
       <div class="glass-card date-card">
-        <p class="wedding-date-text">{{ formattedDate }}</p>
+        <div class="date-container">
+          <p class="wedding-date-text">{{ formattedDate }}</p>
+          <img src="/images/calendar.png" alt="Calendar" class="icon-calendar"> 
+        </div>
         
         <p class="until-wedding">FALTAN...</p>
         <CountdownTimer :targetDate="weddingIsoDate" />
@@ -95,12 +97,6 @@ const googleCalendarUrl = computed(() => {
   object-position: center;
 }
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.65) 100%);
-}
-
 .hero-header-content {
   position: relative;
   z-index: 2;
@@ -151,20 +147,26 @@ const googleCalendarUrl = computed(() => {
   }
 }
 
-.wedding-date-text {
-  font-family: $font-title;
-  font-size: 1.25rem;
-  color: $color-primary;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 1.2rem;
-  line-height: 3rem;
+.date-container {
+  
+  margin: 1rem;
 
-  @media (min-width: $breakpoint-tablet) {
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
+  .wedding-date-text {
+    font-family: $font-title;
+    font-size: 1.25rem;
+    color: $color-primary;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .icon-calendar {
+    width: 290px;
+    object-fit: contain;
   }
 }
+
 
 .until-wedding {
   font-family: $font-tangier;

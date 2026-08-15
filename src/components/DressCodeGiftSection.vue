@@ -2,6 +2,7 @@
   <section class="dress-gift-section section-container">
     <!-- Dress Code -->
     <div class="glass-card dress-card">
+      <img src="/images/suit-logo.gif" alt="Suit" class="icon-suit">
       <p class="section-subtitle">{{ dressCodeType }}</p>
       <p class="section-description">{{ dressCodeDescription }}</p>
       <p class="dress-disclaimer">{{ dressCodeDisclaimer }}</p>
@@ -9,6 +10,7 @@
 
     <!-- Regalo / Alias CBU -->
     <div class="glass-card gift-card">
+      <img src="/images/gift-logo.gif" alt="Gift" class="icon-gift">
       <h2 class="section-subtitle">Nuestra luna de miel</h2>
       <p class="section-description gift-description">{{ giftMessage }}</p>
 
@@ -94,6 +96,11 @@ const copyToClipboard = (text, fieldName) => {
   flex-direction: column;
 }
 
+.icon-suit {
+  width: 130px;
+  object-fit: contain;
+}
+
 .dress-disclaimer {
   display: inline-block;
   font-family: $font-subtitle;
@@ -111,6 +118,11 @@ const copyToClipboard = (text, fieldName) => {
   @media (min-width: $breakpoint-tablet) {
     border-radius: 24px;
     padding: 3rem 2rem;
+  }
+
+  .icon-gift {
+    width: 130px;
+    object-fit: contain;
   }
 
   .section-subtitle, .section-description {
