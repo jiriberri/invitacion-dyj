@@ -18,21 +18,13 @@ defineProps({
 <style lang="scss" scoped>
 .photo-separator-wrapper {
   max-width: 900px;
-  padding: 0 1rem;
-
-  @media (min-width: $breakpoint-tablet) {
-    padding: 0 1.5rem;
-  }
 }
 
 .photo-separator {
   position: relative;
   width: 100%;
   height: 280px;
-  border-radius: 20px;
   overflow: hidden;
-  box-shadow: $shadow-card;
-  border: 1px solid $color-border;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

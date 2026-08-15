@@ -18,9 +18,10 @@
       <div class="icon-circle">
         <MusicIcon class="icon" />
       </div>
-      <h2 class="section-title">¡Que no pare la música!</h2>
-      <p class="section-subtitle">
-        Queremos que la pista de baile sea inolvidable. Ayudanos a armar la playlist perfecta.
+      <h2 class="section-title"> MÚSICA </h2>
+      <p class="section-subtitle">¡Que no pare la fiesta!</p>
+      <p class="section-description">
+        Queremos que la pista de baile sea inolvidable. Ayudanos a armar la playlist perfecta subiendo una canción que no puede faltar.
       </p>
 
       <div class="action-buttons">
@@ -97,9 +98,5 @@ defineProps({
 
 .btn-wrapper {
   margin-top: 1rem;
-}
-
-.music-card {
-  border-left: 4px solid $color-primary;
 }
 </style>
