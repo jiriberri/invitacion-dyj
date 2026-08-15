@@ -23,12 +23,21 @@
           />
         </div>
       </div>
+
+      <button @click="handlePrev" class="nav-btn prev-btn" aria-label="Anterior">
+        <ChevronLeftIcon />
+      </button>
+      <button @click="handleNext" class="nav-btn next-btn" aria-label="Siguiente">
+        <ChevronRightIcon />
+      </button>
+
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { ChevronLeft as ChevronLeftIcon, ChevronRight as ChevronRightIcon } from '@lucide/vue';
 
 const props = defineProps({
   images: {
@@ -157,7 +166,7 @@ onUnmounted(() => {
 
 .nav-btn {
   position: absolute;
-  top: 50%;
+  top: 90%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.85);
   color: $color-primary;
