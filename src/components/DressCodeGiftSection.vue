@@ -10,7 +10,7 @@
     <!-- Regalo / Alias CBU -->
     <div class="glass-card gift-card">
       <h2 class="section-subtitle">Nuestra luna de miel</h2>
-      <p class="section-description">{{ giftMessage }}</p>
+      <p class="section-description gift-description">{{ giftMessage }}</p>
 
       <div class="bank-details-container">
         <div class="bank-row" v-if="cbu">
@@ -118,6 +118,10 @@ const copyToClipboard = (text, fieldName) => {
   }
 }
 
+.gift-description {
+  margin: 0.5rem 0;
+}
+
 .bank-details-container {
   display: flex;
   flex-direction: column;
@@ -125,8 +129,8 @@ const copyToClipboard = (text, fieldName) => {
   gap: 0.9rem;
   margin-top: 2rem;
   font-family: $font-title;
-  font-size: 0.95rem;
-  color: #FFFFFF;
+  font-size: 1.1rem;
+  color: $color-card-bg;
 }
 
 .bank-row {
@@ -167,7 +171,7 @@ const copyToClipboard = (text, fieldName) => {
 }
 
 .copy-btn {
-  background: #FFFFFF;
+  background: $color-card-bg;
   color: $color-primary;
   border: none;
   border-radius: 8px;
