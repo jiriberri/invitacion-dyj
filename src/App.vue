@@ -45,6 +45,13 @@
       :whatsappMessage="weddingData.whatsappMessage"
     />
 
+    <!-- Parte 5: Confirmación de asistencia -->
+    <ConfirmSection
+      :confirmDescription="weddingData.confirmDescription"
+      :dueDate="weddingData.dueDate"
+      :confirmFormUrl="weddingData.confirmFormUrl"
+    />
+
     <!-- Cierre: Foto final -->
     <FooterSection 
       :coupleNames="weddingData.coupleNames"
@@ -61,6 +68,7 @@ import DressCodeGiftSection from './components/DressCodeGiftSection.vue';
 import PhotoCarousel from './components/PhotoCarousel.vue';
 import TransportSection from './components/TransportSection.vue';
 import FooterSection from './components/FooterSection.vue';
+import ConfirmSection from './components/ConfirmSection.vue';
 
 // Configuración fácil de editar para los novios
 const weddingData = ref({
@@ -75,7 +83,7 @@ const weddingData = ref({
   venueAddress: 'Pozo de Vargas 2257 Ingeniero Pablo Nogués',
   googleMapsUrl: 'https://maps.app.goo.gl/pwLpSPKkooLREtjAA',
 
-  musicFormUrl: 'https://forms.google.com', // Link de Google Forms para sugerir música
+  musicFormUrl: 'https://docs.google.com/forms/d/1l5SdNkR4QMU7eSCcu_-eyV9s7y8l-lXmBCkzeAHFeos/edit', // Link de Google Forms para sugerir música
 
   dressCodeType: 'Elegante Sport',
   dressCodeDescription: 'Queremos que estes súper comodo para que puedas bailar toda la noche.',
@@ -86,9 +94,13 @@ const weddingData = ref({
   alias: 'PAPEL.GRADO.MONTE',
   bankHolder: 'Julián Iriberri',
 
-  transportDescription: 'Queremos que disfrutes sin preocuparte por manejar. Si querés sumarte al traslado grupal que estamos organizando, contactate con Mica por WhatsApp.',
+  transportDescription: 'Queremos que disfrutes sin preocuparte por manejar. Si querés sumarte al traslado grupal que estamos organizando, contactate con Mica por WhatsApp.',
   whatsappPhone: '5491112345678',
-  whatsappMessage: '¡Hola! Quisiera consultar acerca del servicio de transporte para la boda de Dai y Juli.'
+  whatsappMessage: '¡Hola! Quisiera consultar acerca del servicio de transporte para la boda de Dai y Juli.',
+
+  confirmDescription: 'Esperamos que puedas acompañarnos en este momento tan especial.',
+  dueDate: 'Te pedimos que completes este formulario antes del 30/09/2026.',
+  confirmFormUrl: 'https://forms.google.com' // Link de Google Forms para confirmar asistencia
 });
 </script>
 

@@ -53,7 +53,7 @@ defineProps({
   },
   musicFormUrl: {
     type: String,
-    default: 'https://forms.google.com'
+    default: 'https://docs.google.com/forms/d/1l5SdNkR4QMU7eSCcu_-eyV9s7y8l-lXmBCkzeAHFeos/edit'
   }
 });
 </script>
