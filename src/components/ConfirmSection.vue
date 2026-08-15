@@ -1,6 +1,6 @@
 <template>
   <section class="confirm-section section-container">
-    <div class="glass-card">
+    <div class="glass-card confirm-card">
       <h2 class="section-title confirm-title">CONFIRMAR ASISTENCIA</h2>
       <p class="section-subtitle">¡Compartí con nosotros!</p>
       <p class="section-description confirm-description">{{ confirmDescription }}</p>
@@ -32,6 +32,9 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .confirm-section {
+    .confirm-card {
+        background-color: $color-card-bg;
+    }
     .confirm-title {
         font-size: 1.3rem;
     }
