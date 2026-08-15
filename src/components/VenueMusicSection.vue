@@ -8,11 +8,9 @@
       <p class="venue-address">{{ venueAddress }}</p>
       <p class="venue-time">Horario: {{ partyTime }} hs</p>
       
-      <div class="btn-wrapper">
-        <a :href="googleMapsUrl" target="_blank" rel="noopener" class="btn-primary">
-          <NavigationIcon /> ¿Cómo llegar?
-        </a>
-      </div>
+      <div class="action-buttons">
+          <a :href="googleMapsUrl" target="_blank" rel="noopener" class="btn-primary">CÓMO LLEGAR</a>
+        </div>
     </div>
 
     <!-- Sugerencia de Música -->
@@ -25,17 +23,15 @@
         Queremos que la pista de baile sea inolvidable. Ayudanos a armar la playlist perfecta.
       </p>
 
-      <div class="btn-wrapper">
-        <a :href="musicFormUrl" target="_blank" rel="noopener" class="btn-secondary">
-          <DiscIcon /> Recomendar una canción
-        </a>
-      </div>
+      <div class="action-buttons">
+          <a :href="musicFormUrl" target="_blank" rel="noopener" class="btn-primary">SUGERIR TEMA</a>
+        </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { Navigation as NavigationIcon, Music as MusicIcon, Disc as DiscIcon } from '@lucide/vue';
+import { Music as MusicIcon } from '@lucide/vue';
 
 defineProps({
   venueName: {

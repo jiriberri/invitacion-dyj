@@ -62,50 +62,13 @@ button {
 }
 
 // Botones Genéricos Mobile-First (Default en Mobile)
-.btn-primary {
-  display: inline-flex;
+.action-buttons {
   align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  width: 100%;
-  min-height: 44px;
-  background: $color-primary;
-  color: $color-white;
-  padding: 0.75rem 1.6rem;
-  border-radius: 40px;
-  font-family: $font-title;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  box-shadow: 0 4px 18px rgba(97, 154, 137, 0.25);
-  transition: $transition-smooth;
-  text-align: center;
-
-  @media (min-width: $breakpoint-tablet) {
-    width: auto;
-    font-size: 1rem;
-    padding: 0.85rem 2.2rem;
-  }
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(97, 154, 137, 0.4);
-    background: $color-primary-hover;
-  }
-
-  &:active {
-    transform: translateY(0);
-  }
-
-  svg {
-    width: 1.15rem;
-    height: 1.15rem;
-    flex-shrink: 0;
-  }
+  margin: 0 auto 1rem auto;
+  width: 195px;
 }
 
-.btn-secondary {
+.btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;

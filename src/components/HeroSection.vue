@@ -17,9 +17,7 @@
         <CountdownTimer :targetDate="weddingIsoDate" />
         
         <div class="action-buttons">
-          <a :href="googleCalendarUrl" target="_blank" rel="noopener" class="btn-secondary">
-            <CalendarPlusIcon /> AGENDAR FECHA
-          </a>
+          <a :href="googleCalendarUrl" target="_blank" rel="noopener" class="btn-primary">AGENDAR FECHA</a>
         </div>
       </div>
     </div>
@@ -178,20 +176,6 @@ const googleCalendarUrl = computed(() => {
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 2.2rem;
-  }
-}
-
-.action-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-
-  @media (min-width: $breakpoint-tablet) {
-    flex-direction: row;
-    gap: 1rem;
   }
 }
 </style>
