@@ -53,9 +53,7 @@
     />
 
     <!-- Cierre: Foto final -->
-    <FooterSection 
-      :coupleNames="weddingData.coupleNames"
-    />
+    <FooterSection />
   </div>
 </template>
 
@@ -100,7 +98,7 @@ const weddingData = ref({
 
   confirmDescription: 'Esperamos que puedas acompañarnos en este momento tan especial.',
   dueDate: 'Te pedimos que completes este formulario antes del 30/09/2026.',
-  confirmFormUrl: 'https://forms.google.com' // Link de Google Forms para confirmar asistencia
+  confirmFormUrl: 'https://docs.google.com/forms/d/1nTSVqhS-m0WOGHuK7uM2jF1h8SLFMQcUv6_jVDQk0zg/edit' // Link de Google Forms para confirmar asistencia
 });
 </script>
 

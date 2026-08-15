@@ -32,6 +32,8 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .confirm-section {
+    background-color: $color-card-bg;
+    
     .confirm-card {
         background-color: $color-card-bg;
     }
