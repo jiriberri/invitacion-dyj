@@ -3,7 +3,7 @@
     <div class="glass-card transport-card">
       <h2 class="section-title">TRANSPORTE</h2>
       <p class="section-subtitle">¿Necesitas transporte?</p>
-      <p class="section-description">{{ transportDescription }}</p>
+      <p class="section-description transport-description">{{ transportDescription }}</p>
 
       <div class="action-buttons">
         <a :href="whatsappUrl" target="_blank" rel="noopener" class="btn-primary">CONTACTAR</a>
@@ -40,6 +40,10 @@ const whatsappUrl = computed(() => {
 .transport-section .transport-card .section-title {
   line-height: 3rem;
   font-size: 1.6rem;
+}
+
+.transport-description {
+  margin: 0.5rem 0;
 }
 
 .icon-circle {
