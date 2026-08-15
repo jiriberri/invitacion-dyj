@@ -1,16 +1,12 @@
 <template>
   <section class="transport-section section-container">
     <div class="glass-card transport-card">
-      <div class="icon-circle">
-        <BusIcon class="icon" />
-      </div>
-      <h2 class="section-title">Transporte & Traslado</h2>
-      <p class="section-subtitle">{{ transportDescription }}</p>
+      <h2 class="section-title">TRANSPORTE</h2>
+      <p class="section-subtitle">¿Necesitas transporte?</p>
+      <p class="section-description">{{ transportDescription }}</p>
 
-      <div class="btn-wrapper">
-        <a :href="whatsappUrl" target="_blank" rel="noopener" class="btn-whatsapp">
-          <MessageCircleIcon /> Consultar / Reservar por WhatsApp
-        </a>
+      <div class="action-buttons">
+        <a :href="whatsappUrl" target="_blank" rel="noopener" class="btn-primary">CONTACTAR</a>
       </div>
     </div>
   </section>
@@ -18,12 +14,11 @@
 
 <script setup>
 import { computed } from 'vue';
-import { Bus as BusIcon, MessageCircle as MessageCircleIcon } from '@lucide/vue';
 
 const props = defineProps({
   transportDescription: {
     type: String,
-    default: 'Contaremos con combis/traslados desde puntos clave de la ciudad hacia el salón para que disfrutes sin preocuparte por el viaje.'
+    default: 'Queremos que disfrutes sin preocuparte por manejar. Si querés sumarte al traslado grupal que estamos organizando, contactate con Mica por WhatsApp.'
   },
   whatsappPhone: {
     type: String,
@@ -42,8 +37,9 @@ const whatsappUrl = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-.transport-section {
-  padding-bottom: 2rem;
+.transport-section .transport-card .section-title {
+  line-height: 3rem;
+  font-size: 1.6rem;
 }
 
 .icon-circle {

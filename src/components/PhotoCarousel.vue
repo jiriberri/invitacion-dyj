@@ -1,6 +1,6 @@
 <template>
   <div class="carousel-container">
-    <h2 class="carousel-title">Nuestros Momentos</h2>
+    <h2 class="section-title carousel-title">Nuestro lugar seguro</h2>
     <div 
       class="carousel-slider"
       @touchstart="onTouchStart"
@@ -23,38 +23,22 @@
           />
         </div>
       </div>
-
-      <button @click="handlePrev" class="nav-btn prev-btn" aria-label="Anterior">
-        <ChevronLeftIcon />
-      </button>
-      <button @click="handleNext" class="nav-btn next-btn" aria-label="Siguiente">
-        <ChevronRightIcon />
-      </button>
-    </div>
-
-    <!-- Indicadores / Puntos -->
-    <div class="indicators">
-      <span 
-        v-for="(img, index) in images" 
-        :key="index"
-        :class="['dot', { active: currentIndex === index }]"
-        @click="goToSlide(index)"
-      ></span>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import { ChevronLeft as ChevronLeftIcon, ChevronRight as ChevronRightIcon } from '@lucide/vue';
 
 const props = defineProps({
   images: {
     type: Array,
     default: () => [
-      '/images/carousel-1.jpg',
-      '/images/carousel-2.jpeg',
-      { src: '/images/carousel-3.jpg', position: 'top' } // REVISAR DESPUES SI ES MEJOR CORTAR LA FOTO
+      {src: '/images/carousel-1.jpg', position: 'bottom'},
+      '/images/carousel-2.jpg',
+      { src: '/images/carousel-3.jpg', position: 'top' }, // REVISAR DESPUES SI ES MEJOR CORTAR LA FOTO
+      '/images/carousel-4.jpg',
+      '/images/carousel-5.jpg',
     ]
   }
 });
@@ -89,11 +73,6 @@ const handleNext = () => {
 };
 const handlePrev = () => {
   prevSlide();
-  resetAutoPlay();
-};
-
-const goToSlide = (index) => {
-  currentIndex.value = index;
   resetAutoPlay();
 };
 
@@ -138,15 +117,9 @@ onUnmounted(() => {
 }
 
 .carousel-title {
-  font-family: $font-title;
-  font-size: 1.8rem;
-  color: $color-primary;
-  margin-bottom: 1.2rem;
-
-  @media (min-width: $breakpoint-tablet) {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-  }
+  line-height: 1.9rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
 .carousel-slider {
@@ -189,8 +162,8 @@ onUnmounted(() => {
   background: rgba(255, 255, 255, 0.85);
   color: $color-primary;
   border-radius: 50%;
-  width: 38px;
-  height: 38px;
+  width: 25px;
+  height: 25px;
   display: flex;
   align-items: center;
   justify-content: center;

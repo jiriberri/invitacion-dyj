@@ -86,7 +86,7 @@ const weddingData = ref({
   alias: 'PAPEL.GRADO.MONTE',
   bankHolder: 'Julián Iriberri',
 
-  transportDescription: 'Para tu comodidad, contaremos con servicio de transporte / combis hacia el salón.',
+  transportDescription: 'Queremos que disfrutes sin preocuparte por manejar. Si querés sumarte al traslado grupal que estamos organizando, contactate con Mica por WhatsApp.',
   whatsappPhone: '5491112345678',
   whatsappMessage: '¡Hola! Quisiera consultar acerca del servicio de transporte para la boda de Dai y Juli.'
 });
