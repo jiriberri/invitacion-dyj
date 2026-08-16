@@ -7,7 +7,8 @@
       <p class="section-subtitle">{{ venueName }}</p>
       <p class="venue-address">{{ venueAddress }}</p>
       <p class="venue-address">21:00 hs</p>
-      <p class="venue-time">Ceremonia comienza {{ partyTime }}hs, ser puntuales</p>
+      <p class="venue-time">La ceremonia comienza {{ partyTime }}hs.</p>
+      <p class="venue-time venue-disclaimer">¡Sean puntuales!</p>
       
       <div class="action-buttons">
           <a :href="googleMapsUrl" target="_blank" rel="noopener" class="btn-primary">CÓMO LLEGAR</a>
@@ -99,6 +100,10 @@ defineProps({
   font-weight: 400;
   margin: 1.5rem 0 0;
   line-height: 1.7rem;
+}
+
+.venue-disclaimer {
+  margin-top: 0rem;
 }
 
 .btn-wrapper {

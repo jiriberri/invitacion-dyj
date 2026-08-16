@@ -3,7 +3,7 @@
     <div class="glass-card transport-card">
       <img src="/images/transport-logo.gif" alt="Transport" class="icon-transport">
       <h2 class="section-title">TRANSPORTE</h2>
-      <p class="section-subtitle">¿Necesitas transporte?</p>
+      <p class="section-subtitle">¿Necesitás transporte?</p>
       <p class="section-description transport-description">{{ transportDescription }}</p>
 
       <div class="action-buttons">
@@ -27,7 +27,7 @@ const props = defineProps({
   },
   whatsappMessage: {
     type: String,
-    default: '¡Hola! Quisiera consultar acerca del servicio de transporte para la boda.'
+    default: '¡Hola! Quisiera consultar acerca del servicio de transporte para el casamiento de Dai y Juli.'
   }
 });
 

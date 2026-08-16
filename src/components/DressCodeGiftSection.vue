@@ -55,7 +55,7 @@ defineProps({
   },
   dressCodeDescription: {
     type: String,
-    default: 'Queremos que estes súper comodo para que puedas bailar toda la noche.'
+    default: 'Queremos que estés súper cómodo para que puedas bailar toda la noche.'
   },
   dressCodeDisclaimer: {
     type: String,
@@ -63,7 +63,7 @@ defineProps({
   },
   giftMessage: {
     type: String,
-    default: 'Tu presencia es lo único que necesitamos. Si queres hacernos un presente para nuestra luna de miel, te dejamos nuestra cuenta bancaria.'
+    default: 'Tu presencia es lo único que necesitamos. Si querés hacernos un presente para nuestra luna de miel, te dejamos nuestra cuenta bancaria.'
   },
   cbu: {
     type: String,

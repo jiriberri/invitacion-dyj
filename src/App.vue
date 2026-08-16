@@ -84,17 +84,17 @@ const weddingData = ref({
   musicFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe7L8FKq-OOIi_AY3q6t5GG2yZ2KwPiYSXVZ6HVSDySHFzG2g/viewform?usp=publish-editor', // Link de Google Forms para sugerir música
 
   dressCodeType: 'Elegante Sport',
-  dressCodeDescription: 'Queremos que estes súper comodo para que puedas bailar toda la noche.',
+  dressCodeDescription: 'Queremos que estés súper cómodo para que puedas bailar toda la noche.',
   dressCodeDisclaimer: '¡Por favor no asistir con colores claros!',
 
-  giftMessage: 'Tu presencia es lo único que necesitamos. Si queres hacernos un presente para nuestra luna de miel, te dejamos nuestra cuenta bancaria.',
+  giftMessage: 'Tu presencia es lo único que necesitamos. Si querés hacernos un presente para nuestra luna de miel, te dejamos nuestra cuenta bancaria.',
   cbu: '0720079388000002409786',
   alias: 'PAPEL.GRADO.MONTE',
   bankHolder: 'Julián Iriberri',
 
   transportDescription: 'Queremos que disfrutes sin preocuparte por manejar. Si querés sumarte al traslado grupal que estamos organizando, contactate con Mica por WhatsApp.',
   whatsappPhone: '541133702865',
-  whatsappMessage: '¡Hola! Quisiera consultar acerca del servicio de transporte para la boda de Dai y Juli.',
+  whatsappMessage: '¡Hola! Quisiera consultar acerca del servicio de transporte para el casamiento de Dai y Juli.',
 
   confirmDescription: 'Esperamos que puedas acompañarnos en este momento tan especial.',
   dueDate: 'Te pedimos que completes este formulario antes del 30/09/2026.',
