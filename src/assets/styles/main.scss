@@ -28,6 +28,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden; // bloquea scroll horizontal a nivel raíz
 }
 
 body {
@@ -36,6 +37,7 @@ body {
   color: $color-text;
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100vw; // evita que el body sea más ancho que el viewport
   -webkit-font-smoothing: antialiased;
 }
 
@@ -55,7 +57,7 @@ button {
 .action-buttons {
   align-items: center;
   width: 100%;
-  margin: 1.5rem auto 1rem auto;
+  margin: 2rem auto 1rem auto;
 }
 
 .btn-primary {
@@ -122,7 +124,7 @@ button {
   font-family: $font-subtitle;
   font-weight: 400;
   letter-spacing: 0.5px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1rem;
   color: $color-primary;
   text-align: center;
@@ -154,6 +156,6 @@ button {
   font-size: 1.2rem;
   font-weight: 400;
   color: $color-primary;
-  margin: 0.5rem 1rem;
+  margin: 1rem 1rem;
   line-height: 1.5rem;
 }

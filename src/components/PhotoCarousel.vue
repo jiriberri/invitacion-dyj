@@ -1,6 +1,10 @@
 <template>
   <div class="carousel-container">
-    <h2 class="section-title carousel-title">Nuestro lugar seguro</h2>
+    <div class="carousel-title-container">
+        <img src="/images/heart.png" alt="Corazon" class="heart-icon">
+        <h2 class="section-title carousel-title">Nuestro lugar seguro</h2>
+        <img src="/images/heart.png" alt="Corazon" class="heart-icon">
+    </div>
     <div 
       class="carousel-slider"
       @touchstart="onTouchStart"
@@ -43,8 +47,8 @@ const props = defineProps({
   images: {
     type: Array,
     default: () => [
-      {src: '/images/carousel-1.jpg', position: 'bottom'},
-      '/images/carousel-2.jpg',
+      '/images/carousel-1.jpg',
+      {src: '/images/carousel-2.jpg', position: 'bottom'},
       { src: '/images/carousel-3.jpg', position: 'top' }, // REVISAR DESPUES SI ES MEJOR CORTAR LA FOTO
       '/images/carousel-4.jpg',
       '/images/carousel-5.jpg',
@@ -116,7 +120,7 @@ onUnmounted(() => {
 .carousel-container {
   width: 100%;
   max-width: 850px;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   padding: 0 1rem;
   text-align: center;
 
@@ -125,10 +129,21 @@ onUnmounted(() => {
   }
 }
 
+.carousel-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.heart-icon {
+  width: 10px;
+  object-fit: contain;
+}
+
 .carousel-title {
   line-height: 1.9rem;
   font-weight: 500;
-  margin-bottom: 1rem;
 }
 
 .carousel-slider {

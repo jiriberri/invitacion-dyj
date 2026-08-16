@@ -50,17 +50,18 @@ const props = defineProps({
         padding-bottom: 4rem;
     }
     .confirm-title {
+      padding-top: 2rem;
         font-size: 1.3rem;
     }
 
     .confirm-description {
-        margin: 0.8rem 1rem;
+        margin: 1rem 5rem;
     }
 
     .confirm-due-date {
         font-size: 1rem;
         line-height: 1.7rem;
-        margin: 0.8rem 1rem;
+        margin: 0rem 6rem 1rem;
     }
 }
 </style>

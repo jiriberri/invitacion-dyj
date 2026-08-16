@@ -3,6 +3,7 @@
     <!-- Dress Code -->
     <div class="glass-card dress-card">
       <img src="/images/suit-logo.gif" alt="Suit" class="icon-suit">
+      <p class="section-title">DRESS CODE</p>
       <p class="section-subtitle">{{ dressCodeType }}</p>
       <p class="section-description">{{ dressCodeDescription }}</p>
       <p class="dress-disclaimer">{{ dressCodeDisclaimer }}</p>
@@ -11,7 +12,7 @@
     <!-- Regalo / Alias CBU -->
     <div class="glass-card gift-card">
       <img src="/images/gift-logo.gif" alt="Gift" class="icon-gift">
-      <h2 class="section-subtitle">Nuestra luna de miel</h2>
+      <h2 class="section-subtitle gift-title">Nuestra luna de miel</h2>
       <p class="section-description gift-description">{{ giftMessage }}</p>
 
       <div class="bank-details-container">
@@ -23,7 +24,7 @@
           </button>
         </div>
 
-        <div class="bank-row" v-if="alias">
+        <div class="bank-row alias" v-if="alias">
           <span class="bank-text"><span class="bank-label">Alias:</span> {{ alias }}</span>
           <button @click="copyToClipboard(alias, 'alias')" class="copy-btn" title="Copiar Alias">
             <CheckIcon v-if="copiedField === 'alias'" class="check-icon" />
@@ -99,6 +100,7 @@ const copyToClipboard = (text, fieldName) => {
 .icon-suit {
   width: 130px;
   object-fit: contain;
+  padding-bottom: 1rem;
 }
 
 .dress-disclaimer {
@@ -106,13 +108,13 @@ const copyToClipboard = (text, fieldName) => {
   font-family: $font-subtitle;
   text-align: center;
   color: $color-primary;
-  font-size: 1rem;
-  margin: 0.5rem auto 0 auto;
+  font-size: 1.05rem;
   line-height: 1.7rem;
 }
 
 .gift-card {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  padding-top: 2.5rem;
   padding-bottom: 4rem;
   position: relative;
   z-index: 3;
@@ -137,20 +139,25 @@ const copyToClipboard = (text, fieldName) => {
     object-fit: contain;
   }
 
-  .section-subtitle, .section-description {
+  .gift-title, .gift-description {
     color: #FFFFFF;
+  }
+  .gift-title {
+    margin-top: 0;
+  }
+
+  .gift-description {
+    margin: 0.5rem 5rem;
+    font-size: 1.1rem;
   }
 }
 
-.gift-description {
-  margin: 0.5rem 0;
-}
 
 .bank-details-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.9rem;
+  gap: 0.5rem;
   margin-top: 2rem;
   font-family: $font-title;
   font-size: 1.1rem;
@@ -169,6 +176,10 @@ const copyToClipboard = (text, fieldName) => {
     font-size: 1.15rem;
     gap: 0.8rem;
   }
+}
+
+.alias {
+  gap: 0.8rem;
 }
 
 .bank-text {

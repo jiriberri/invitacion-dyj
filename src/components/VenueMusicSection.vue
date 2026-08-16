@@ -4,7 +4,7 @@
     <div class="glass-card venue-card">
       <img src="/images/party-logo.gif" alt="Party" class="icon-party">
       <h2 class="section-title">FIESTA</h2>
-      <p class="venue-name">{{ venueName }}</p>
+      <p class="section-subtitle">{{ venueName }}</p>
       <p class="venue-address">{{ venueAddress }}</p>
       <p class="venue-time">Ceremonia comienza {{ partyTime }}hs, ser puntuales</p>
       
@@ -18,7 +18,7 @@
       <img src="/images/music-logo.gif" alt="Music" class="icon-music">
       <h2 class="section-title"> MÚSICA </h2>
       <p class="section-subtitle">¡Que no pare la fiesta!</p>
-      <p class="section-description">
+      <p class="section-description music-description">
         Queremos que la pista de baile sea inolvidable. Ayudanos a armar la playlist perfecta subiendo una canción que no puede faltar.
       </p>
 
@@ -60,7 +60,7 @@ defineProps({
 .venue-music-section {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  padding: 1rem 0;
 }
 
 .icon-party {
@@ -71,6 +71,7 @@ defineProps({
 .icon-music {
   width: 90px;
   object-fit: contain;
+  padding-bottom: 1.5rem;
 }
 
 .venue-name {
@@ -93,7 +94,7 @@ defineProps({
 .venue-time {
   font-family: $font-subtitle;
   color: $color-primary;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 400;
   margin: 1.5rem 0 0;
   line-height: 1.7rem;

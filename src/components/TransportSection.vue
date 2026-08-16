@@ -38,18 +38,14 @@ const whatsappUrl = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-.transport-section .transport-card .section-title {
-  line-height: 3rem;
-  font-size: 1.6rem;
-}
-
 .icon-transport {
   width: 130px;
   object-fit: contain;
+  margin-bottom: 1rem;
 }
 
 .transport-description {
-  margin: 0.5rem 0;
+  margin: 1rem 1rem 2rem;
 }
 
 .icon-circle {

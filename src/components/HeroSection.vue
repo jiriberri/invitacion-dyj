@@ -111,9 +111,9 @@ const googleCalendarUrl = computed(() => {
 
 .couple-names {
   font-family: $font-against;
-  font-size: 3.5rem;
+  font-size: 3.1rem;
   font-weight: 400;
-  line-height: 6rem;
+  line-height: 3rem;
   color: $color-white;
   text-shadow: 0 4px 15px rgba(0,0,0,0.4);
 
@@ -138,25 +138,24 @@ const googleCalendarUrl = computed(() => {
 
 // Make the section-container full-width for this component only
 .date-container {
-  max-width: 100%;
-  padding: 0;
-}
+    max-width: 100%;
+    padding: 0;
 
-.date-card {
-  margin-top: -2.8rem;
-  position: relative;
-  z-index: 3;
-  background-color: transparent !important;
-  background-image: url('/images/beige-back.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  .date-card {
+    margin-top: -1.5rem;
+    position: relative;
+    z-index: 3;
+    background-color: transparent !important;
+    background-image: url('/images/beige-back.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
-  // Overflow both sides so scalloped edges go off-screen, stays centered
-  width: 130%;
-  margin-left: -15%;
-}
+    // Overflow both sides so scalloped edges go off-screen, stays centered
+    width: 130%;
+    margin-left: -15%;
+    padding: 3.5rem 0 4rem 0;
+  }
 
-.date-container {
   .wedding-date-text {
     font-family: $font-title;
     font-size: 1.25rem;
@@ -176,10 +175,11 @@ const googleCalendarUrl = computed(() => {
 
 .until-wedding {
   font-family: $font-tangier;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: $color-primary;
   font-weight: 400;
   letter-spacing: 1px;
+  padding: 2rem 0 0 0;
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 2.2rem;
