@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <div class="section-container">
+    <div class="section-container date-container">
       <div class="glass-card date-card">
         <div class="date-container">
           <p class="wedding-date-text">{{ formattedDate }}</p>
@@ -136,21 +136,27 @@ const googleCalendarUrl = computed(() => {
   }
 }
 
+// Make the section-container full-width for this component only
+.date-container {
+  max-width: 100%;
+  padding: 0;
+}
+
 .date-card {
   margin-top: -2.8rem;
   position: relative;
   z-index: 3;
-  background-color: $color-card-bg;
+  background-color: transparent !important;
+  background-image: url('/images/beige-back.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 
-  @media (min-width: $breakpoint-tablet) {
-    margin-top: -4rem;
-  }
+  // Overflow both sides so scalloped edges go off-screen, stays centered
+  width: 130%;
+  margin-left: -15%;
 }
 
 .date-container {
-  
-  margin: 1rem;
-
   .wedding-date-text {
     font-family: $font-title;
     font-size: 1.25rem;
