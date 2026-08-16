@@ -63,7 +63,7 @@ defineProps({
   },
   giftMessage: {
     type: String,
-    default: 'Tu presencia es lo único que necesitamos. Si queres hacernos un presente te para nuestra luna de miel, dejamos nuestra cuenta bancaria.'
+    default: 'Tu presencia es lo único que necesitamos. Si queres hacernos un presente para nuestra luna de miel, te dejamos nuestra cuenta bancaria.'
   },
   cbu: {
     type: String,

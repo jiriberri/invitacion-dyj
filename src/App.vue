@@ -87,7 +87,7 @@ const weddingData = ref({
   dressCodeDescription: 'Queremos que estes súper comodo para que puedas bailar toda la noche.',
   dressCodeDisclaimer: '¡Por favor no asistir con colores claros!',
 
-  giftMessage: 'Tu presencia es lo único que necesitamos. Si queres hacernos un presente te para nuestra luna de miel, dejamos nuestra cuenta bancaria.',
+  giftMessage: 'Tu presencia es lo único que necesitamos. Si queres hacernos un presente para nuestra luna de miel, te dejamos nuestra cuenta bancaria.',
   cbu: '0720079388000002409786',
   alias: 'PAPEL.GRADO.MONTE',
   bankHolder: 'Julián Iriberri',
