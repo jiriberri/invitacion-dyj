@@ -6,6 +6,7 @@
       <h2 class="section-title">FIESTA</h2>
       <p class="section-subtitle">{{ venueName }}</p>
       <p class="venue-address">{{ venueAddress }}</p>
+      <p class="venue-address">21:00 hs</p>
       <p class="venue-time">Ceremonia comienza {{ partyTime }}hs, ser puntuales</p>
       
       <div class="action-buttons">

@@ -81,7 +81,7 @@ const weddingData = ref({
   venueAddress: 'Pozo de Vargas 2257 Ingeniero Pablo Nogués',
   googleMapsUrl: 'https://maps.app.goo.gl/pwLpSPKkooLREtjAA',
 
-  musicFormUrl: 'https://docs.google.com/forms/d/1l5SdNkR4QMU7eSCcu_-eyV9s7y8l-lXmBCkzeAHFeos/edit', // Link de Google Forms para sugerir música
+  musicFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe7L8FKq-OOIi_AY3q6t5GG2yZ2KwPiYSXVZ6HVSDySHFzG2g/viewform?usp=publish-editor', // Link de Google Forms para sugerir música
 
   dressCodeType: 'Elegante Sport',
   dressCodeDescription: 'Queremos que estes súper comodo para que puedas bailar toda la noche.',
@@ -93,12 +93,12 @@ const weddingData = ref({
   bankHolder: 'Julián Iriberri',
 
   transportDescription: 'Queremos que disfrutes sin preocuparte por manejar. Si querés sumarte al traslado grupal que estamos organizando, contactate con Mica por WhatsApp.',
-  whatsappPhone: '5491112345678',
+  whatsappPhone: '541133702865',
   whatsappMessage: '¡Hola! Quisiera consultar acerca del servicio de transporte para la boda de Dai y Juli.',
 
   confirmDescription: 'Esperamos que puedas acompañarnos en este momento tan especial.',
   dueDate: 'Te pedimos que completes este formulario antes del 30/09/2026.',
-  confirmFormUrl: 'https://docs.google.com/forms/d/1nTSVqhS-m0WOGHuK7uM2jF1h8SLFMQcUv6_jVDQk0zg/edit' // Link de Google Forms para confirmar asistencia
+  confirmFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScRdocg27UL3ZI8Ge_nTQ0yxavcmCrfkdoNPMNOiB7p_x-gWg/viewform?usp=publish-editor' // Link de Google Forms para confirmar asistencia
 });
 </script>
 
