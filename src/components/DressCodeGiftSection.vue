@@ -112,7 +112,19 @@ const copyToClipboard = (text, fieldName) => {
 }
 
 .gift-card {
-  background-color: $color-primary;
+  margin-top: 1rem;
+  padding-bottom: 4rem;
+  position: relative;
+  z-index: 3;
+  background-color: transparent !important;
+  background-image: url('/images/green-back.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  // Overflow both sides so scalloped edges go off-screen, stays centered
+  width: 130%;
+  margin-left: -15%;
+
   color: #FFFFFF;
 
   @media (min-width: $breakpoint-tablet) {
