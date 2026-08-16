@@ -26,6 +26,9 @@ defineProps({
 <style lang="scss" scoped>
 .footer-section {
   width: 100%;
+  position: static;
+  z-index: 4;
+  margin-top: -3rem;
 }
 
 .closing-image-wrapper {

@@ -32,10 +32,22 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .confirm-section {
-    background-color: $color-card-bg;
-    
+    max-width: 100%;
+    padding-bottom: 0;
+
     .confirm-card {
-        background-color: $color-card-bg;
+        margin-top: -2.8rem;
+        position: relative;
+        z-index: 3;
+        background-color: transparent !important;
+        background-image: url('/images/beige-back.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        // Overflow both sides so scalloped edges go off-screen, stays centered
+        width: 130%;
+        margin-left: -15%;
+        padding-bottom: 4rem;
     }
     .confirm-title {
         font-size: 1.3rem;
