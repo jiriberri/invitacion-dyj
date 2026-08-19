@@ -86,6 +86,11 @@ onUnmounted(() => {
     gap: 0.8rem;
     margin: 2rem 0;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    gap: 0.6rem;
+    margin: 1.5rem 0;
+  }
 }
 
 .countdown-item {
@@ -100,12 +105,22 @@ onUnmounted(() => {
     min-width: 75px;
   }
 
+  @media (min-width: $breakpoint-desktop) {
+    padding: 0.8rem 0.8rem;
+    min-width: 65px;
+  }
+
   .number {
     font-family: $font-title;
     font-size: 3rem;
     font-weight: 700;
     color: $color-primary;
     line-height: 3rem;
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+    }
   }
 
   .label {
@@ -122,6 +137,11 @@ onUnmounted(() => {
       letter-spacing: 1px;
       margin-top: 0.45rem;
     }
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+    }
   }
 }
 
@@ -135,6 +155,11 @@ onUnmounted(() => {
   @media (min-width: $breakpoint-tablet) {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.6rem;
+    margin-bottom: 0.9rem;
   }
 }
 </style>

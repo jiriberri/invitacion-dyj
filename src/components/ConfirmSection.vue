@@ -39,7 +39,7 @@ const props = defineProps({
         margin-top: -2.8rem;
         position: relative;
         z-index: 3;
-        background-color: transparent !important;
+        background-color: transparent;
         background-image: url('/images/beige-back.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -48,20 +48,40 @@ const props = defineProps({
         width: 130%;
         margin-left: -15%;
         padding-bottom: 4rem;
+
+        @media (min-width: $breakpoint-desktop) {
+          background-color: $color-card-bg !important;
+          background-image: none; 
+          width: 115%;
+          margin-left: -7.5%;
+          padding-bottom: 3.5rem;
+        }
     }
     .confirm-title {
       padding-top: 2rem;
         font-size: 1.3rem;
+
+        @media (min-width: $breakpoint-desktop) {
+          font-size: 1.4rem;
+        }
     }
 
     .confirm-description {
         margin: 1rem 5rem;
+
+        @media (min-width: $breakpoint-desktop) {
+          margin: 1.2rem 4rem;
+        }
     }
 
     .confirm-due-date {
         font-size: 1rem;
         line-height: 1.7rem;
         margin: 0rem 6rem 1rem;
+
+        @media (min-width: $breakpoint-desktop) {
+          margin: 0.5rem 5rem 1.2rem;
+        }
     }
 }
 </style>

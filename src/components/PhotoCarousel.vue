@@ -127,6 +127,10 @@ onUnmounted(() => {
   @media (min-width: $breakpoint-tablet) {
     margin: 3.5rem auto;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    margin: 2rem auto;
+  }
 }
 
 .carousel-title-container {
@@ -139,6 +143,10 @@ onUnmounted(() => {
 .heart-icon {
   width: 10px;
   object-fit: contain;
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 12px;
+  }
 }
 
 .carousel-title {
@@ -158,6 +166,11 @@ onUnmounted(() => {
   @media (min-width: $breakpoint-tablet) {
     height: 450px;
     border-radius: 24px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    height: 380px;
+    border-radius: 18px;
   }
 }
 
@@ -198,6 +211,12 @@ onUnmounted(() => {
   @media (min-width: $breakpoint-tablet) {
     width: 44px;
     height: 44px;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 36px;
+    height: 36px;
+    top: 50%;
   }
 
   &:hover {

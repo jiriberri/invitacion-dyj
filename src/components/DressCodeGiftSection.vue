@@ -101,6 +101,10 @@ const copyToClipboard = (text, fieldName) => {
   width: 130px;
   object-fit: contain;
   padding-bottom: 1rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 150px;
+  }
 }
 
 .dress-disclaimer {
@@ -110,6 +114,10 @@ const copyToClipboard = (text, fieldName) => {
   color: $color-primary;
   font-size: 1.05rem;
   line-height: 1.7rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.15rem;
+  }
 }
 
 .gift-card {
@@ -130,13 +138,26 @@ const copyToClipboard = (text, fieldName) => {
   color: #FFFFFF;
 
   @media (min-width: $breakpoint-tablet) {
+    background-color: $color-primary !important;
+    background-image: none;
     border-radius: 24px;
     padding: 3rem 2rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 115%;
+    margin-left: -7.5%;
+    border-radius: 0;
+    padding: 2.5rem 2rem 3.5rem;
   }
 
   .icon-gift {
     width: 130px;
     object-fit: contain;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 150px;
+    }
   }
 
   .gift-title, .gift-description {
@@ -149,6 +170,11 @@ const copyToClipboard = (text, fieldName) => {
   .gift-description {
     margin: 0.5rem 5rem;
     font-size: 1.1rem;
+
+    @media (min-width: $breakpoint-desktop) {
+      margin: 0.8rem 4rem;
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -162,6 +188,11 @@ const copyToClipboard = (text, fieldName) => {
   font-family: $font-title;
   font-size: 1.1rem;
   color: $color-card-bg;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.2rem;
+    gap: 0.6rem;
+  }
 }
 
 .bank-row {

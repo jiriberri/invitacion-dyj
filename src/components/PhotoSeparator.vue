@@ -33,6 +33,11 @@ defineProps({
     height: 420px;
     border-radius: 24px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    height: 350px;
+    border-radius: 0;
+  }
 }
 
 .separator-overlay {

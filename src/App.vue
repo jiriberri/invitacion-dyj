@@ -108,5 +108,15 @@ const weddingData = ref({
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $breakpoint-desktop) {
+    background-color: #FFFFFF;
+    max-width: 650px;
+    margin: 2.5rem auto;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 8px 60px rgba(0, 0, 0, 0.25), 0 2px 20px rgba(0, 0, 0, 0.1);
+    min-height: auto;
+  }
 }
 </style>

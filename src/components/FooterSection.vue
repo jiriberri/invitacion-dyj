@@ -29,6 +29,10 @@ defineProps({
   position: static;
   z-index: 4;
   margin-top: -3rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    margin-top: -2rem;
+  }
 }
 
 .closing-image-wrapper {
@@ -42,11 +46,6 @@ defineProps({
   align-items: flex-end;
   justify-content: center;
   text-align: center;
-
-  @media (min-width: $breakpoint-tablet) {
-    height: 85vh;
-    min-height: 600px;
-  }
 }
 
 .closing-image {
@@ -75,6 +74,10 @@ defineProps({
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 2.5rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 2.2rem;
   }
 }
 </style>

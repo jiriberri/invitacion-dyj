@@ -85,6 +85,12 @@ const googleCalendarUrl = computed(() => {
     height: 80vh;
     min-height: 500px;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    height: 70vh;
+    min-height: 450px;
+    max-height: 600px;
+  }
 }
 
 .hero-image {
@@ -94,7 +100,7 @@ const googleCalendarUrl = computed(() => {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
 }
 
 .hero-header-content {
@@ -120,6 +126,11 @@ const googleCalendarUrl = computed(() => {
   @media (min-width: $breakpoint-tablet) {
     font-size: 4rem;
   }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 3.8rem;
+    line-height: 3.5rem;
+  }
 }
 
 .pre-title {
@@ -133,6 +144,10 @@ const googleCalendarUrl = computed(() => {
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 1.6rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.7rem;
   }
 }
 
@@ -154,6 +169,14 @@ const googleCalendarUrl = computed(() => {
     width: 130%;
     margin-left: -15%;
     padding: 3.5rem 0 4rem 0;
+
+    @media (min-width: $breakpoint-desktop) {
+      background-color: $color-card-bg !important;
+      background-image: none;
+      width: 115%;
+      margin-left: -7.5%;
+      padding: 3rem 0 3.5rem 0;
+    }
   }
 
   .wedding-date-text {
@@ -164,11 +187,19 @@ const googleCalendarUrl = computed(() => {
     letter-spacing: 1px;
     line-height: 3rem;
     margin-bottom: 0.5rem;
+
+    @media (min-width: $breakpoint-desktop) {
+      font-size: 1.4rem;
+    }
   }
 
   .icon-calendar {
     width: 290px;
     object-fit: contain;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: 340px;
+    }
   }
 }
 
@@ -183,6 +214,11 @@ const googleCalendarUrl = computed(() => {
 
   @media (min-width: $breakpoint-tablet) {
     font-size: 2.2rem;
+  }
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.3rem;
+    padding: 1.5rem 0 0 0;
   }
 }
 </style>

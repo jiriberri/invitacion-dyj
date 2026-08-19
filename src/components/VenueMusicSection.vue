@@ -63,17 +63,29 @@ defineProps({
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
+
+  @media (min-width: $breakpoint-desktop) {
+    padding: 1.5rem 0;
+  }
 }
 
 .icon-party {
   width: 130px;
   object-fit: contain;
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 150px;
+  }
 }
 
 .icon-music {
   width: 90px;
   object-fit: contain;
   padding-bottom: 1.5rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 110px;
+  }
 }
 
 .venue-name {
@@ -91,6 +103,11 @@ defineProps({
   margin-bottom: 0.3rem;
   padding: 0 4rem;
   line-height: 1.5rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.3rem;
+    padding: 0 5rem;
+  }
 }
 
 .venue-time {
@@ -100,6 +117,10 @@ defineProps({
   font-weight: 400;
   margin: 1.5rem 0 0;
   line-height: 1.7rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    font-size: 1.15rem;
+  }
 }
 
 .venue-disclaimer {

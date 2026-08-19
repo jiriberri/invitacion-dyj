@@ -42,10 +42,18 @@ const whatsappUrl = computed(() => {
   width: 130px;
   object-fit: contain;
   margin-bottom: 1rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    width: 150px;
+  }
 }
 
 .transport-description {
   margin: 1rem 1rem 2rem;
+
+  @media (min-width: $breakpoint-desktop) {
+    margin: 1.2rem 3rem 2rem;
+  }
 }
 
 .icon-circle {
