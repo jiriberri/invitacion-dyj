@@ -37,6 +37,8 @@
         </div>
       </div>
 
+      <p class="gift-disclaimer">Cuenta bimonetaria</p>
+
       <transition name="fade">
         <p v-if="copiedField" class="copy-toast">¡Copiado al portapapeles con éxito!</p>
       </transition>
@@ -184,7 +186,7 @@ const copyToClipboard = (text, fieldName) => {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  margin-top: 2rem;
+  margin: 2rem 0 0.5rem;
   font-family: $font-title;
   font-size: 1.1rem;
   color: $color-card-bg;
@@ -232,6 +234,19 @@ const copyToClipboard = (text, fieldName) => {
   margin-top: 0.1rem;
 
   @media (min-width: $breakpoint-tablet) {
+    font-size: 1.15rem;
+  }
+}
+
+.gift-disclaimer {
+  display: inline-block;
+  color: $color-card-bg;
+  font-family: $font-subtitle;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.7rem;
+
+  @media (min-width: $breakpoint-desktop) {
     font-size: 1.15rem;
   }
 }
